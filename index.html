@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AOTY</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+    }
+    .search-bar {
+        margin-left: auto; 
+        order: 2; 
+      }
+    .search-bar input[type="text"],
+    .search-bar button {
+      background-color: #3d3d3d;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      margin-right: 5px; 
+      border-radius: 3px;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+    }
+    .profile img {
+      border-radius: 50%; 
+      width: 100px; 
+      height: 100px;
+      margin-right: 10px; 
+    }
+      
+    nav {
+      background-color: #555;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    section {
+      padding: 20px;
+    }
+    .album {
+      display: inline-block;
+      margin: 10px;
+      text-align: center;
+    }
+    .album img {
+      width: 200px; 
+      height: auto; 
+    }
+    .album p {
+      margin: 5px 0;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      bottom: 0;
+      width: 100%;
+    }
+    .search-footer {
+      margin-bottom: 10px;
+    }
+    
+    .search-footer input[type="text"],
+    .search-footer button {
+      background-color: #3d3d3d;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      margin-right: 5px;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Album of the Year</h1>
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Nombre Album, Artista...">
+        <button onclick="search()">Buscar</button>
+      </div>
+  </header>
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Álbumes</a>
+    <a href="#">Artistas</a>
+    <a href="#">Reseñas</a>
+    <a href="#">Listas</a>
+  </nav>
+  <section>
+    <div class="profile">
+      <img src="https://i.ibb.co/QkWZ7ks/Whats-App-Image-2024-04-07-at-17-50-47-2bc3bb48.jpg" alt="Foto de perfil">
+      <h2>Miguel_A</h2>
+
+    </div>
+    <h2>Últimos álbumes reseñados</h2>
+    <div class="album" data-search="Cowboy Carter Beyoncé">
+      <a href="album1.html">
+        <img src="https://i.ibb.co/b2z7nHP/image-2024-04-07-182602188.png" alt="Album 1">
+        <p>Cowboy Carter</p>
+        <p>Beyoncé</p>
+      </a>
+    </div>
+    <div class="album" data-search="Eternal Sunshine Ariana Grande">
+      <a href="album2.html">
+        <img src="https://i.ibb.co/C178CKb/image-2024-04-07-183112624.png" alt="Album 2">
+        <p>Eternal Sunshine</p>
+        <p>Ariana Grande</p>
+      </a>
+    </div>
+    <div class="album" data-search="EVERYTHING IS LOVE The Carters">
+      <a href="album3.html">
+        <img src="https://i.ibb.co/NKc3S8m/image-2024-04-07-182848042.png" alt="Album 3">
+        <p>EVERYTHING IS LOVE</p>
+        <p>The Carters</p>
+      </a>
+    </div>
+    <div class="album" data-search="Mr. Morale & the Big Steppers Kendrick Lamar">
+      <a href="album4.html">
+        <img src="https://i.ibb.co/znLzsrY/image-2024-04-07-183640979.png" alt="Album 4">
+        <p>Mr. Morale & the Big Steppers</p>
+        <p>Kendrick Lamar</p>
+      </a>
+    </div>
+    <div class="album" data-search="Dawn FM The Weeknd">
+      <a href="album5.html">
+        <img src="https://i.ibb.co/hMvDK8j/image-2024-04-07-184330709.png" alt="Album 5">
+        <p>Dawn FM</p>
+        <p>The Weeknd</p>
+      </a>
+    </div>
+    <div class="album" data-search="The Slow Rush Tame Impala">
+      <a href="album6.html">
+        <img src="https://i.ibb.co/GVF8RWm/image-2024-04-07-185316749.png" alt="Album 6">
+        <p>The Slow Rush</p>
+        <p>Tame Impala</p>
+      </a>
+    </div>
+
+  </section>
+  <footer>
+    <p>Si desea inscribirse para recibir notificaciones cuando Miguel_A suba una reseña, ingrese su correo en la siguiente casilla:</p>
+    <div class="search-footer">
+      <input type="text" id="searchFooterInput" placeholder="Correo Electronico">
+      <button onclick="searchFooter()">Aceptar</button>
+    </div>
+    <p>Derechos de autor &copy; 2024 AOTY</p>
+  </footer>
+  <script>
+    function search() {
+      var searchTerm = document.getElementById('searchInput').value; 
+      filterAlbums(searchTerm.toLowerCase()); // Llama a la función de filtrado pasando el término de búsqueda en minúsculas
+    }
+  
+    function filterAlbums(searchTerm) {
+      var albums = document.querySelectorAll('.album'); // Selecciona todos los elementos .album
+      albums.forEach(function(album) {
+        var dataSearch = album.getAttribute('data-search').toLowerCase(); // Obtiene el valor del atributo data-search en minúsculas
+        if (dataSearch.includes(searchTerm)) { // Comprueba si el término de búsqueda está incluido en los datos de búsqueda
+          album.style.display = 'inline-block'; // Muestra el álbum si coincide
+        } else {
+          album.style.display = 'none'; // Oculta el álbum si no coincide
+        }
+      });
+    }
+    function searchFooter() {
+      alert('Su correo fue agregado a la lista de notificaciones correctamente'); 
+    }
+  </script>
+</body>
+</html>

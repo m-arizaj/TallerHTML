@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AOTY</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+    }
+    .profile {
+      display: flex; 
+      align-items: center;
+    }
+    .profile img {
+      border-radius: 50%; 
+      width: 50px; 
+      height: 50px;
+      margin-right: 10px; 
+    }
+    .profile h2 {
+      margin: 0; 
+      color: #333; 
+      font-size: 20px;
+    }
+    .rating-circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-left: 10px;
+    }
+    .rating-circle.green {
+      background-color: green;
+    }
+    .rating {
+      margin-left: 5px;
+    }
+    nav {
+      background-color: #555;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    section {
+      padding: 20px;
+    }
+    .album-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .album {
+      margin: 10px;
+      text-align: center;
+    }
+    .album img {
+      width: 200px; 
+      height: auto; 
+    }
+    .album p {
+      margin: 5px 0;
+    }
+    .review-section {
+      margin-top: 20px;
+    }
+    .review-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .my-review h3 {
+        font-size: 20px; 
+      }
+    .review-table th,
+    .review-table td {
+      border: 1px solid #333;
+      padding: 8px;
+      text-align: center;
+    }
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        bottom: 0;
+        width: 100%;
+      }
+      
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Album of the Year</h1>
+  </header>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="index.html">Álbumes</a>
+    <a href="#">Artistas</a>
+    <a href="#">Reseñas</a>
+    <a href="#">Listas</a>
+  </nav>
+  <section>
+    <div class="album-container">
+      <div class="album">
+        <img src="https://i.ibb.co/b2z7nHP/image-2024-04-07-182602188.png" alt="Album 1">
+        <div class="album-details">
+          <h3>Cowboy Carter</h3>
+          <p>Beyoncé</p>
+        </div>
+      </div>
+      <div class="profile">
+        <img src="https://i.ibb.co/QkWZ7ks/Whats-App-Image-2024-04-07-at-17-50-47-2bc3bb48.jpg" alt="Foto de perfil">
+        <h2>Miguel_A</h2>
+        <div class="rating-circle green"></div>
+        <span class="rating">9.5/10</span>
+      </div>
+    </div>
+    <div class="review-section">
+      <h3 class="my-review">Mi reseña:</h3>
+      <p>Beyoncé demuestra un dominio sobre su forma única de contar consistentemente su propia vida, rindiendo homenaje a los grandes artistas que la precedieron, presentando nuevos artistas subestimados mientras eleva a los artistas existentes que comparten su pasión por la trayectoria musical del country. Todo esto mientras experimenta y traspasa sus límites con nuevos géneros y una audacia vocal, Cowboy Carter lo tiene todo. Es un álbum bastante largo, pero puedo decir con confianza que la producción, el ritmo y la narración me mantuvieron interesado y mi interés alcanzó su punto máximo en la mayor parte.
+        Este album no es una pieza que sea de gusto inmediato. Personalmente, con álbumes largos como este, tiendo a escuchar el album varias veces y en ese proceso adquiero un gusto por la mayoria de las canciones. En general, hay algunos interludios que suman a la experiencia pero que podrian ser saltados sin ningun problema. Para finalizar puedo decir que definitivamente el album tiene su inspiracion en el country, pero como todos los albumes de Beyoncé son una combinacion de generos que ella domina y experimenta en su labor. Le doy esta calificación al album ya que la produccion y trabajo de este es impecable pero la cohesion que este tiene no es muy visible como su anterior album. </p>
+      <h3 class="my-review">Reseñas de críticos:</h3>
+      <table class="review-table">
+        <thead>
+          <tr>
+            <th>Crítico</th>
+            <th>Calificación</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="https://www.rollingstone.com/music/music-album-reviews/beyonce-cowboy-carter-review-1234996919/">Rolling Stone</a></td>
+            <td>10/10</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.theguardian.com/music/2024/apr/06/beyonce-cowboy-carter-review-country-music-album">The Guardian</a></td>
+            <td>10/10</td>
+          </tr>
+          <tr>
+            <td><a href="https://pitchfork.com/reviews/albums/beyonce-cowboy-carter/">Pitchfork</a></td>
+            <td>8.4/10</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <footer>
+    <p>Derechos de autor &copy; 2024 AOTY</p>
+  </footer>
+</body>
+</html>

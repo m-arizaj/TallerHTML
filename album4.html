@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AOTY</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+    }
+    .profile {
+      display: flex; 
+      align-items: center;
+    }
+    .profile img {
+      border-radius: 50%; 
+      width: 50px; 
+      height: 50px;
+      margin-right: 10px; 
+    }
+    .profile h2 {
+      margin: 0; 
+      color: #333; 
+      font-size: 20px;
+    }
+    .rating-circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-left: 10px;
+    }
+    .rating-circle.green {
+      background-color: green;
+    }
+    .rating {
+      margin-left: 5px;
+    }
+    nav {
+      background-color: #555;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    section {
+      padding: 20px;
+    }
+    .album-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .album {
+      margin: 10px;
+      text-align: center;
+    }
+    .album img {
+      width: 200px; 
+      height: auto; 
+    }
+    .album p {
+      margin: 5px 0;
+    }
+    .review-section {
+      margin-top: 20px;
+    }
+    .review-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .my-review h3 {
+        font-size: 20px; 
+      }
+    .review-table th,
+    .review-table td {
+      border: 1px solid #333;
+      padding: 8px;
+      text-align: center;
+    }
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        bottom: 0;
+        width: 100%;
+      }
+      
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Album of the Year</h1>
+  </header>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="index.html">Álbumes</a>
+    <a href="#">Artistas</a>
+    <a href="#">Reseñas</a>
+    <a href="#">Listas</a>
+  </nav>
+  <section>
+    <div class="album-container">
+      <div class="album">
+        <img src="https://i.ibb.co/znLzsrY/image-2024-04-07-183640979.png" alt="Album 4">
+        <div class="album-details">
+          <h3>Mr. Morale & the Big Steppers</h3>
+          <p>Kendrick Lamar</p>
+        </div>
+      </div>
+      <div class="profile">
+        <img src="https://i.ibb.co/QkWZ7ks/Whats-App-Image-2024-04-07-at-17-50-47-2bc3bb48.jpg" alt="Foto de perfil">
+        <h2>Miguel_A</h2>
+        <div class="rating-circle green"></div>
+        <span class="rating">10/10</span>
+      </div>
+    </div>
+    <div class="review-section">
+      <h3 class="my-review">Mi reseña:</h3>
+      <p>Este es un álbum que exige paciencia. Es complicado. Pero sin importar que se haya estado siguiendo la historia de Kendrick desde sus inicios con Section.80 o simplemente cuando en la radio lo unico que sonaba era Humble de su album DAMN en 2018, esta es la historia esencial y potencialmente definitiva de un artista de primer nivel. A dia de hoy, su trayectoria demuestra que su experiencia en el Hip-Hop es bastante solida. La cohesion que este album tiene es lo que lo hace tan especial. Este album, a diferencia de otros, cuenta una historia que se inspira en la cultura de violencia y intoleracia que se vive a diario y que Kendrick vivio en carne propia. Puede que no sea divertido, pero es realmente brillante y convincente. 
+        Esto algo a lo que personalmente vuelvo una y otra vez como una pieza musical y como un documento de pensamiento profundo.   </p>
+      <h3 class="my-review">Reseñas de críticos:</h3>
+      <table class="review-table">
+        <thead>
+          <tr>
+            <th>Crítico</th>
+            <th>Calificación</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="https://www.theguardian.com/music/2022/may/13/kendrick-lamar-mr-morale-the-big-steppers-review">The Guardian</a></td>
+            <td>10/10</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.standard.co.uk/culture/music/kendrick-lamar-mr-morale-and-the-big-steppers-review-b999623.html">The Evening Standard</a></td>
+            <td>10/10</td>
+          </tr>
+          <tr>
+            <td><a href="https://hiphopdx.com/reviews/id.3867/title.kendrick-lamar-mr-morale-the-big-steppers-album-review">HipHopDX</a></td>
+            <td>8.4/10</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <footer>
+    <p>Derechos de autor &copy; 2024 AOTY</p>
+  </footer>
+</body>
+</html>

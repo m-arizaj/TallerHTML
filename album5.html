@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AOTY</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+    }
+    .profile {
+      display: flex; 
+      align-items: center;
+    }
+    .profile img {
+      border-radius: 50%; 
+      width: 50px; 
+      height: 50px;
+      margin-right: 10px; 
+    }
+    .profile h2 {
+      margin: 0; 
+      color: #333; 
+      font-size: 20px;
+    }
+    .rating-circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-left: 10px;
+    }
+    .rating-circle.green {
+      background-color: green;
+    }
+    .rating {
+      margin-left: 5px;
+    }
+    nav {
+      background-color: #555;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    section {
+      padding: 20px;
+    }
+    .album-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .album {
+      margin: 10px;
+      text-align: center;
+    }
+    .album img {
+      width: 200px; 
+      height: auto; 
+    }
+    .album p {
+      margin: 5px 0;
+    }
+    .review-section {
+      margin-top: 20px;
+    }
+    .review-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .my-review h3 {
+        font-size: 20px; 
+      }
+    .review-table th,
+    .review-table td {
+      border: 1px solid #333;
+      padding: 8px;
+      text-align: center;
+    }
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        bottom: 0;
+        width: 100%;
+      }
+      
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Album of the Year</h1>
+  </header>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="index.html">Álbumes</a>
+    <a href="#">Artistas</a>
+    <a href="#">Reseñas</a>
+    <a href="#">Listas</a>
+  </nav>
+  <section>
+    <div class="album-container">
+      <div class="album">
+        <img src="https://i.ibb.co/hMvDK8j/image-2024-04-07-184330709.png" alt="Album 4">
+        <div class="album-details">
+          <h3>Dawn FM</h3>
+          <p>The Weeknd</p>
+        </div>
+      </div>
+      <div class="profile">
+        <img src="https://i.ibb.co/QkWZ7ks/Whats-App-Image-2024-04-07-at-17-50-47-2bc3bb48.jpg" alt="Foto de perfil">
+        <h2>Miguel_A</h2>
+        <div class="rating-circle green"></div>
+        <span class="rating">10/10</span>
+      </div>
+    </div>
+    <div class="review-section">
+      <h3 class="my-review">Mi reseña:</h3>
+      <p>Abel Tesfaye es una persona muy talentosa y este album lo demuestra complemtamente. A parte de su gran rango vocal, su experencia en produccion musical va mas alla de los limites. En tiempos donde artistas crean musica sin sentido, Abel crea una nueva faceta en su anunciada trilogia. lo que distingue a este proyecto de sus lanzamientos anteriores es la gran cantidad de atención que se dedicó a la secuenciación de las pistas del álbum. Su tematica de una radio ochentera es una experencia musical con una cohesion de principio a fin. Con ayuda de un grupo selecto de grandes artistas que hacen parte del album, este podria ser el mejor album que Abel ha hecho hasta ahora.    </p>
+      <h3 class="my-review">Reseñas de críticos:</h3>
+      <table class="review-table">
+        <thead>
+          <tr>
+            <th>Crítico</th>
+            <th>Calificación</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="https://www.theguardian.com/music/2022/jan/07/the-weeknd-dawn-fm-review">The Guardian</a></td>
+            <td>10/10</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.rollingstone.co.uk/music/album-reviews/the-weeknd-hits-a-new-peak-on-dawn-fm-album-review-9125/">Rolling Stone</a></td>
+            <td>8/10</td>
+          </tr>
+          <tr>
+            <td><a href="https://pitchfork.com/reviews/albums/the-weeknd-dawn-fm/">Pitchfork</a></td>
+            <td>8/10</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <footer>
+    <p>Derechos de autor &copy; 2024 AOTY</p>
+  </footer>
+</body>
+</html>
